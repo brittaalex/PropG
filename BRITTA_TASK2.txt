@@ -1,0 +1,35 @@
+1. There is a syntax error in $ArrayURL = split('/', $_SERVER[REQUEST_URI]));
+=> $ArrayURL = split('/', $_SERVER[REQUEST_URI]);
+
+2. Use of split is discouraged. It is deprecated as per the latest PHP 5.3.1 version, preg_split() is suggested or incase of no regular expression can use explode() also.
+
+3. $_SERVER[REQUEST_URI] => $_SERVER['REQUEST_URI'] => This is the actual syntax as per the PHP manual to avoid any future errors.
+
+4. Jquery => $.get(	
+    "/getinfo/111", {},
+    function(data) { $('.InfoDiv').html(data); }
+);
+=> Unnecessary curly braces. Curly braces not necessary.
+$.get(
+    "/getinfo/111",
+    function(data) 
+	{ 
+	$('.InfoDiv').html(data);
+ 	}
+);
+
+4. $data = new dataObj(); => This is wrong, It should be $data = new baseObj();
+
+5. As the class file is declared as data.php it would be better if you use the same name for the class instead of baseObj.
+
+6. $table should be declared public in base class and no need to declare private in sub class,need to only assign the tablename
+
+7. Table condo Id should be primary key.
+
+8. In table condo PID is INT, it should be BIGINT instead as the PID references to property table.
+
+9. Table property engine is MyIsam, this should be INNODB as all other tables are INNODB.
+
+10.  In all extended classes need not declare private for $table, need to just assign values
+
+	 
