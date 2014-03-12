@@ -8,14 +8,14 @@
 
 class Functionalities
 {
-    
+    //function for positive range integers
     public function PositiveIntRange($string)
     {
-        $array = explode(",", $string);
+        $array = explode(",", $string);//explode the string to array
         $rs = "";
-        for($i=0;$i<count($array);$i++)
+        for($i=0;$i<count($array);$i++)// loop the array
         {
-              if($array[$i] % 3 == 0 && $array[$i] % 5 == 0 )
+              if($array[$i] % 3 == 0 && $array[$i] % 5 == 0 )//conditions
                 {
                      $rs .= "FizzBuzz&nbsp;";
                 }
@@ -37,11 +37,12 @@ class Functionalities
         }
         return $rs;
     }
+     //function for positive range integers to print Bazz for consecutive ones
     public function PositiveIntRangeConsecutive($string2)
     {
-        $array1 = explode(",", $string2);
+        $array1 = explode(",", $string2);//explode the string to array
         $rs1 = "";
-        for($j=0;$j<count($array1);$j++)
+        for($j=0;$j<count($array1);$j++)//loop array
         {
            if($array1[$j] % 3 == 0) 
            {

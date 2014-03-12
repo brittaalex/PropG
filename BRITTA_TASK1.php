@@ -16,16 +16,16 @@
             //on clicking the form button,the form data is serialized to process for the functionality
          $(document).on("click","#sub",function(e)
              {
-                 if($('#field1').val() !== "")
+                 if($('#field1').val() !== "")//check if null
                  {
-                 var data = $("#frm_task1").serialize();
+                 var data = $("#frm_task1").serialize();//serialize data
                  var sturl = "http://localhost/GitHub/PropG/ajax_task.php?task=1";
-                 $.ajax({
+                 $.ajax({//ajax form submit
                          type : "POST",
                          url :sturl,
                          data:data,
                          success:function(data)
-                         {
+                         {//if success
                             $("#result").html(data);
                          }
                        });
