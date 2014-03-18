@@ -48,13 +48,16 @@ class Functionalities
            {
                  $rs1 .= "Fizz&nbsp;";
                  $j++;
-                 if($array1[$j] % 5 == 0)
+                 if($j<count($array1))
                  {
-                    $rs1 .= "Buzz&nbsp;";  
-                    $j++;
+                    if($array1[$j] % 5 == 0)
+                    {
+                       $rs1 .= "Buzz&nbsp;";  
+                       $j++;
+                    }
+                     $rs1 .= "Bazz&nbsp;";
                  }
                 
-                 $rs1 .= "Bazz&nbsp;";
                  
            }
            elseif($array1[$j] % 5 == 0)
@@ -62,14 +65,16 @@ class Functionalities
                
                  $rs1 .= "Buzz&nbsp;";
                  $j++;
-                  if($array1[$j] % 3 == 0)
+                  if($j<count($array1))
                  {
-                    $rs1 .= "Fizz&nbsp;"; 
-                    $j++;
-                 }
-                
-                 $rs1 .= "Bazz&nbsp;";
-                 
+                    if($array1[$j] % 3 == 0)
+                   {
+                      $rs1 .= "Fizz&nbsp;"; 
+                      $j++;
+                   }
+
+                   $rs1 .= "Bazz&nbsp;";
+                 } 
             }
             else
             {
